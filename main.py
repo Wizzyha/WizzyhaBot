@@ -10,7 +10,6 @@ bot = telebot.TeleBot('7130959835:AAE2_9i0vCj6MO2TX-h2YHFug-pvx8Klx9E')
 def send_welcome(message):
     bot.reply_to(message,"Привет, Денис. Введи расход через дефис в виде [Категория-Цена-Комментарий]:")
 
-
 @bot.message_handler(content_types=["text"])
 def repeat_all_messages(message):
     try:
@@ -22,7 +21,7 @@ def repeat_all_messages(message):
     except:
         bot.send_message(message.chat.id, 'ОШИБКА! Неправильный формат данных!')
 
-    bot.send_message(message.chat.id, 'Введите расход через дефис в виде [Категория-Цена-Комментарий]:')
+    bot.send_message(message.chat.id, 'Введи расход через дефис в виде [Категория-Цена-Комментарий]:')
 
 
 if __name__ == '__main__':
